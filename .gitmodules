@@ -4,3 +4,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git://github.com/vim-scripts/supertab.git
+[submodule "tools/libc-database"]
+	path = tools/libc-database
+	url = git@github.com:niklasb/libc-database.git
