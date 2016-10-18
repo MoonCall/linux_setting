@@ -1,0 +1,15 @@
+#! /bin/sh
+
+ln -s -f ~/setting/bash/bashrc ~/.bashrc
+ln -s -f ~/setting/vim/ ~/.vim
+rm ~/setting/vim/vim # ln's strange action
+ln -s -f ~/setting/vim/vimrc ~/.vimrc
+ln -s -f ~/setting/script/ ~/script
+rm ~/setting/script/script # ln's strange action
+ln -s -f ~/setting/tools/ ~/tools
+rm ~/setting/tools/tools # ln's strange action
+ln -s -f ~/setting/gdb/gdbinit ~/.gdbinit
+
+ln -s -f ~/setting/vim/pathogen/autoload ~/setting/vim/autoload
+rm ~/setting/vim/pathogen/autoload/autoload # ln's strange action
+echo "DONE"

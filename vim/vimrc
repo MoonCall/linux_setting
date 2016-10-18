@@ -1,0 +1,14 @@
+set number
+set autoindent
+set smartindent
+set shiftwidth=3
+set tabstop=3
+set hlsearch
+
+map <C-\> :!gid <cword> \| less <CR><CR>
+map <C-p> :tabe %<CR>
+
+set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
