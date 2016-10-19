@@ -5,10 +5,29 @@ set shiftwidth=3
 set tabstop=3
 set hlsearch
 
+" for idutils
 map <C-\> :!gid <cword> \| less <CR><CR>
 map <C-p> :tabe %<CR>
 
+" for ctags
 set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
 
+" for nerd tree
+map <C-t> :NERDTreeToggle<CR>
+
+" for tagbar
+map l :TagbarToggle<CR>
+
+" for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" for pathogen
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
