@@ -1,20 +1,18 @@
 set number
 set autoindent
 set smartindent
-set shiftwidth=3
-set tabstop=3
+set shiftwidth=4
+set tabstop=4
 set hlsearch
+set expandtab
 
 " for split window move
-nnoremap <C-Right> <C-w>l
-nnoremap <C-Left> <C-w>h
-nnoremap <C-Up> <C-w>k
-nnoremap <C-Down> <C-w>j
-
-nnoremap a<C-Right> <C-W>L
-nnoremap a<C-Left> <C-W>H
-nnoremap a<C-Up> <C-W>K
-nnoremap a<C-Down> <C-W>J
+nnoremap <C-Right> :wincmd l<CR>
+nnoremap <C-Left> :wincmd h<CR>
+nnoremap <C-Up> :wincmd k<CR>
+nnoremap <C-Down> :wincmd j<CR>
+map f<C-Left> :wincmd k<CR>f
+map f<C-Right> :wincmd j<CR>f
 
 " for idutils
 map <C-\> :!gid <cword> \| less <CR><CR>
@@ -24,10 +22,10 @@ map <C-p> :tabe %<CR>
 set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
 
 " for nerd tree
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " for tagbar
-map l :TagbarToggle<CR>
+nnoremap <C-l> :TagbarToggle<CR>
 
 " for syntastic
 set statusline+=%#warningmsg#
@@ -40,7 +38,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
 "map <C-f> :SyntasticToggleMode<CR>
-map <C-f> :YcmDiags<CR>
+nnoremap <C-f> :YcmDiags<CR>
 
 " for YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
@@ -50,11 +48,11 @@ let g:ycm_key_list_previous_completion = ['', '']
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_warning_symbol = '>*'
 
-map <C-g> :YcmCompleter GoTo<CR>
-map <C-h> :YcmCompleter GoToImprecise<CR>
-map <C-d> :YcmCompleter GoToDeclaration<CR>
+nnoremap <C-g> :YcmCompleter GoTo<CR>
+nnoremap <C-h> :YcmCompleter GoToImprecise<CR>
+nnoremap <C-d> :YcmCompleter GoToDeclaration<CR>
 "nnoremap <C-t> :YcmCompleter GetType<CR>
-map <C-p> :YcmCompleter GetParent<CR>
+nnoremap <C-p> :YcmCompleter GetParent<CR>
 
 " for pathogen
 call pathogen#runtime_append_all_bundles()

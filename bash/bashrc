@@ -136,6 +136,16 @@ for tool in $(ls $HOME/tools); do
     fi
 done
 
+for library in $(ls $HOME/setting/lib); do
+	export LIBRARY_PATH=$HOME/setting/lib/$library:$LIBRARY_PATH
+	export LD_LIBRARY_PATH=$HOME/setting/lib/$library:$LD_LIBRARY_PATH
+done
+
 for script in $(ls $HOME/script); do
 		export PATH=$HOME/script/$script:$PATH
 done
+
+PATH=~/bin:$PATH
+
+alias ocaml='rlwrap ocaml'
+alias sml='rlwrap sml'
