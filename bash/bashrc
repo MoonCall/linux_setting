@@ -113,26 +113,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
-for tool in $(ls $HOME/tools); do
-    if [ -d $HOME/tools/$tool/bin ]; then
-        export PATH=$HOME/tools/$tool/bin:$PATH
+for tool in $(ls $HOME/.tools); do
+    if [ -d $HOME/.tools/$tool/bin ]; then
+        export PATH=$HOME/.tools/$tool/bin:$PATH
     fi
-    if [ -d $HOME/tools/$tool/lib ]; then
-        export LIBRARY_PATH=$HOME/tools/$tool/lib:$LIBRARY_PATH
-        export LD_RUN_PATH=$HOME/tools/$tool/lib:$LD_RUN_PATH
-        export LD_LIBRARY_PATH=$HOME/tools/$tool/lib:$LD_LIBRARY_PATH
+    if [ -d $HOME/.tools/$tool/lib ]; then
+        export LIBRARY_PATH=$HOME/.tools/$tool/lib:$LIBRARY_PATH
+        export LD_RUN_PATH=$HOME/.tools/$tool/lib:$LD_RUN_PATH
+        export LD_LIBRARY_PATH=$HOME/.tools/$tool/lib:$LD_LIBRARY_PATH
     fi
-    if [ -d $HOME/tools/$tool/lib64 ]; then
-        export LIBRARY_PATH=$HOME/tools/$tool/lib64:$LIBRARY_PATH
-        export LD_RUN_PATH=$HOME/tools/$tool/lib64:$LD_RUN_PATH
-        export LD_LIBRARY_PATH=$HOME/tools/$tool/lib64:$LD_LIBRARY_PATH
+    if [ -d $HOME/.tools/$tool/lib64 ]; then
+        export LIBRARY_PATH=$HOME/.tools/$tool/lib64:$LIBRARY_PATH
+        export LD_RUN_PATH=$HOME/.tools/$tool/lib64:$LD_RUN_PATH
+        export LD_LIBRARY_PATH=$HOME/.tools/$tool/lib64:$LD_LIBRARY_PATH
     fi
-    if [ -d $HOME/tools/$tool/include ]; then
-        export C_INCLUDE_PATH=$HOME/tools/$tool/include:$C_INCLUDE_PATH
-        export CPLUS_INCLUDE_PATH=$HOME/tools/$tool/include:$CPLUS_INCLUDE_PATH
+    if [ -d $HOME/.tools/$tool/include ]; then
+        export C_INCLUDE_PATH=$HOME/.tools/$tool/include:$C_INCLUDE_PATH
+        export CPLUS_INCLUDE_PATH=$HOME/.tools/$tool/include:$CPLUS_INCLUDE_PATH
     fi
-    if [ -d $HOME/tools/$tool/lib/pkgconfig ]; then
-        export PKG_CONFIG_PATH=$HOME/tools/$tool/lib/pkgconfig:$PKG_CONFIG_PATH
+    if [ -d $HOME/.tools/$tool/lib/pkgconfig ]; then
+        export PKG_CONFIG_PATH=$HOME/.tools/$tool/lib/pkgconfig:$PKG_CONFIG_PATH
     fi
 done
 
@@ -141,8 +141,8 @@ for library in $(ls $HOME/setting/lib); do
 	export LD_LIBRARY_PATH=$HOME/setting/lib/$library:$LD_LIBRARY_PATH
 done
 
-for script in $(ls $HOME/script); do
-		export PATH=$HOME/script/$script:$PATH
+for script in $(ls $HOME/.script); do
+		export PATH=$HOME/.script/$script:$PATH
 done
 
 PATH=~/bin:$PATH
