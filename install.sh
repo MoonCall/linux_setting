@@ -7,10 +7,8 @@ fi
 
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-git submodule init
-git submodule update --recursive
-git submodule foreach --recursive git submodule init
-git submodule foreach --recursive git submodule update --recursive
+git submodule update --init --recursive
+git submodule foreach --recursive git submodule update --init --recursive
 
 bash create-symlink.sh
 
