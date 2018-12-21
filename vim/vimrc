@@ -5,6 +5,7 @@ set shiftwidth=2
 set tabstop=2
 set hlsearch
 set expandtab
+set backspace=indent,eol,start
 syntax on
 
 " for split window move
