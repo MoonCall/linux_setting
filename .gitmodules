@@ -19,3 +19,6 @@
 [submodule "vim/ycmd"]
 	path = vim/ycmd
 	url = https://github.com/Valloric/ycmd.git
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
