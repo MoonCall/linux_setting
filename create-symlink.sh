@@ -9,11 +9,19 @@ ln -s -f $SCRIPT_PATH/tools ~/.tools
 ln -s -f $SCRIPT_PATH/vim/pathogen/autoload $SCRIPT_PATH/vim/autoload
 
 # ln's strange action
-rm $SCRIPT_PATH/vim/vim
-rm $SCRIPT_PATH/script/script
-rm $SCRIPT_PATH/tools/tools
-rm $SCRIPT_PATH/vim/pathogen/autoload/autoload
-
+if [ -e $SCRIPT_PATH/vim/vim ]; then
+  rm $SCRIPT_PATH/vim/vim
+fi
+if [ -e $SCRIPT_PATH/script/script ]; then
+  rm $SCRIPT_PATH/script/script
+fi
+if [ -e $SCRIPT_PATH/tools/tools ]; then
+  rm $SCRIPT_PATH/tools/tools
+fi
+if [ -e $SCRIPT_PATH/vim/pathogen/autoload/autoload ]; then
+  rm $SCRIPT_PATH/vim/pathogen/autoload/autoload
+fi
+ 
 # file link
 ln -s -f $SCRIPT_PATH/bash/bashrc ~/.bashrc
 ln -s -f $SCRIPT_PATH/vim/vimrc ~/.vimrc
