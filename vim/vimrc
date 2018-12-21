@@ -56,6 +56,5 @@ nnoremap <C-d> :YcmCompleter GoToDeclaration<CR>
 nnoremap <C-p> :YcmCompleter GetParent<CR>
 
 " for pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
 
