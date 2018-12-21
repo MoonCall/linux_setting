@@ -7,10 +7,7 @@ fi
 
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-UNAME=$(uname)
-if [ "$UNAME" = "Darwin" ]; then
-  brew install CMake
-fi
+bash install-dependency.sh
 
 git submodule update --init --recursive
 git submodule foreach --recursive git submodule update --init --recursive
