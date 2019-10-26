@@ -22,3 +22,7 @@
 [submodule "vim/bundle/typescript-vim"]
 	path = vim/bundle/typescript-vim
 	url = git@github.com:leafgarland/typescript-vim.git
+
+[submodule "tools/pwndbg"]
+	path = tools/pwndbg
+	url = git@github.com:pwndbg/pwndbg.git
