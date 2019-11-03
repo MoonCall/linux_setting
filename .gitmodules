@@ -26,3 +26,6 @@
 [submodule "tools/pwndbg"]
 	path = tools/pwndbg
 	url = git@github.com:pwndbg/pwndbg.git
+[submodule "tools/peda-heap"]
+	path = tools/peda-heap
+	url = git://github.com/Mipu94/peda-heap.git
