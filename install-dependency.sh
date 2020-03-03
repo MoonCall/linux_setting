@@ -13,6 +13,8 @@ if [ "$UNAME" = "Linux" ]; then
   sudo apt-get install -y git curl rlwrap
   sudo apt-get install -y build-essential cmake python3-dev
   sudo apt-get install -y gdb
+  pushd $SCRIPT_PATH/tools/pwndbg
   $SCRIPT_PATH/tools/pwndbg/setup.sh
+  popd
   echo "Install dependency for Linux"
 fi

@@ -7,10 +7,9 @@ fi
 
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-bash install-dependency.sh
-
 git submodule update --init --recursive
 git submodule foreach --recursive git submodule update --init --recursive
 
+bash install-dependency.sh
 bash create-symlink.sh
 
