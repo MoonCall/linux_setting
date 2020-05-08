@@ -149,7 +149,7 @@ PATH=~/bin:$PATH
 
 alias ocaml='rlwrap ocaml'
 alias sml='rlwrap sml'
-alias gitlog='git log --graph --oneline --all'
+alias gitlog='git log --graph --oneline --all --decorate=short'
 alias hgrep='iconv -c -f UTF-8-MAC -t UTF-8 | grep '
 alias vi='vim'
 
